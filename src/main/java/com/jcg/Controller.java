@@ -2,7 +2,7 @@ package com.jcg;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.awt.Font;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
@@ -40,6 +40,12 @@ public class Controller implements ActionListener {
 		else if((e.getActionCommand()).compareTo("Save")==0){
 			model.setText(messageField.getText());
 			model.db.saveNote(model);
+		}
+		else if((e.getActionCommand()).compareTo("font++")==0){
+			this.messageField.setFont(new Font("Verdana", Font.BOLD, 15));
+		}
+		else if((e.getActionCommand()).compareTo("font--")==0){
+			this.messageField.setFont(new Font("Verdana", Font.BOLD, 9));
 		}
 		else{
 			System.out.println("Hello");
