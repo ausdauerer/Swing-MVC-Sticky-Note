@@ -48,4 +48,17 @@ public class DataBase {
         } 
         return("");
     }
+    public String getLatestVersion(){
+        try{
+            Statement stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery("select max(id) from note;");	      
+            while(rs.next()){
+                return(rs.getString("max"));
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        } 
+        return("");
+    }
 }

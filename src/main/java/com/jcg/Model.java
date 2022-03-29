@@ -8,10 +8,12 @@ public class Model {
 
 	private String text;
 	DataBase db;
+	private String version;
 
 	public Model() {
 		db=new DataBase();
 		text=db.getLatestNote();
+		version=db.getLatestVersion();
 	}
 	
 	public Model(String n, String t) {
@@ -29,6 +31,14 @@ public class Model {
 	@Override
 	public String toString() {
 		return text;
+	}
+
+	public void setVersion(String t) {
+		version = t;
+		System.out.println("Successfully set Version to -> "+t);
+	}
+	public String getVersion() {
+		return version;
 	}
 	
 }

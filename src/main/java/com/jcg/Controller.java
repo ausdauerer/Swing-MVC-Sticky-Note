@@ -18,12 +18,15 @@ public class Controller implements ActionListener {
 	
 	private JTextArea messageField;
 	private Model model;
+	private JTextField header;
 
-	public Controller(JTextArea searchTermTextField,Model model) {
+	public Controller(JTextField header,JTextArea searchTermTextField,Model model) {
 		super();
 		this.messageField = searchTermTextField;
 		this.model=model;
 		this.messageField.setText(model.getText());
+		this.header=header;
+		this.header.setText("Version : "+model.getVersion());
 	}
 
 	@Override

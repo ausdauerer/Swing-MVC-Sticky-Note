@@ -27,19 +27,21 @@ public class View {
 		Model model=new Model();
 		
 
+		JTextField textfield=new JTextField();
 		JTextArea text=new JTextArea();
-		text.setBounds(10,10,580,380);  
+		text.setBounds(10,50,580,380);  
 		JButton button = new JButton("Save");
 		JButton erasebutton=new JButton("Clear");
-		erasebutton.setBounds(350,400,100,50);
-		button.setBounds(150,400,100,50);
+		button.setBounds(150,450,100,50);
+		textfield.setBounds(10,10,580,30);
+		textfield.setEditable(false);
 
-		Controller controller = new Controller(text,model);
+		Controller controller = new Controller(textfield,text,model);
 		button.addActionListener(controller);
 		erasebutton.addActionListener(controller);
-		erasebutton.setBounds(300,400,100,50);
+		erasebutton.setBounds(300,450,100,50);
 
-		JFrame frame = new JFrame("Swing MVC Demo");
+		JFrame frame = new JFrame("Sticky Note");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
@@ -47,7 +49,8 @@ public class View {
 		frame.add(text);
 		frame.add(button);
 		frame.add(erasebutton);
-		frame.setSize(600,500);
+		frame.add(textfield);
+		frame.setSize(600,550);
         frame.show();
 	}
 
