@@ -1,9 +1,5 @@
 package com.jcg;
 
-/**
- * @author ashraf
- *
- */
 public class Model {
 
 	private String text;

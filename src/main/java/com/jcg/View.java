@@ -17,10 +17,7 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 import javax.swing.JTextArea;
 
-/**
- * @author ashraf
- *
- */
+
 public class View {
 
 	public View() {

@@ -10,10 +10,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.table.DefaultTableModel;
 
-/**
- * @author ashraf
- *
- */
+
 public class Controller implements ActionListener {
 	
 	private JTextArea messageField;
